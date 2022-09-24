@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Komponen React JS</title>
+</head>
+<body>
+<div class="row">
+  <div class="col-12">
+    <div id="header"></div>
+  </div>
+</div>
+<h2 class="text-center">Tentang Saya</h2>
+<div class="row">
+  <div class="col-3 p-3">
+    <div id="app"></div>
+  </div>
+  <div class="col-3 p-3">
+    <div id="app2"></div>
+  </div>
+  <div class="col-3 p-3">
+    <div id="app3"></div>
+  </div>
+  <div class="col-3 p-3">
+    <div id="app4"></div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div id="footer"></div>
+  </div>
+</div>
+<script type="text/babel">
+  //1. class component
+    //class nameComponent extends React.component{render(){return<value>}}
+  //2. function component
+    //function nameComponent(){return <value>}
+  //3. arrow function
+    //const nameComponent = () =>{return<value>}
+    const NavHeader = () =>{
+      return(
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <div class="container">
+            <a class="navbar-brand" style={{color: "yellow"}} href="#">HUMAM</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#bio1" style={{color: "yellow"}}>Biografi</a>
+                <a class="nav-link" href="#skill" style={{color: "yellow"}}>Skills Service</a>
+                <a class="nav-link" href="#produk" style={{color: "yellow"}}>Product</a>
+                <a class="nav-link" href="#saran" style={{color: "yellow"}}>Kontak</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      )
+    }
+    const Biografi = () => {
+      return (
+        <div className="card">
+          <div class="card-body">
+            <h5 className="card-title">Biografi</h5>
+              <p className="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem voluptas nostrum, numquam eos ad magnam ratione incidunt natus, consequatur minus delectus totam officiis placeat quod vitae amet a inventore dicta.</p>
+                <a href="#" className="btn btn-primary">Lihat</a>
+          </div>
+        </div>
+      )
+    }
+
+    const Pengalaman = () => {
+      return (
+        <div className="card">
+          <div class="card-body">
+            <h5 className="card-title">Pengalaman</h5>
+              <p className="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem voluptas nostrum, numquam eos ad magnam ratione incidunt natus, consequatur minus delectus totam officiis placeat quod vitae amet a inventore dicta.</p>
+                <a href="#" className="btn btn-primary">Lihat</a>
+          </div>
+        </div>
+      )
+    }
+
+    const Karya = () => {
+      return (
+        <div className="card">
+          <div class="card-body">
+            <h5 className="card-title">Karya</h5>
+              <p className="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem voluptas nostrum, numquam eos ad magnam ratione incidunt natus, consequatur minus delectus totam officiis placeat quod vitae amet a inventore dicta.</p>
+                <a href="#" className="btn btn-primary">Lihat</a>
+          </div>
+        </div>
+      )
+    }
+
+    const Penghargaan = () => {
+      return (
+        <div className="card">
+          <div class="card-body"> 
+            <h5 className="card-title">Penghargaan</h5>
+              <p className="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem voluptas nostrum, numquam eos ad magnam ratione incidunt natus, consequatur minus delectus totam officiis placeat quod vitae amet a inventore dicta.</p>
+                <a href="#" className="btn btn-primary">Lihat</a>
+          </div>
+        </div>
+      )
+    }
+
+    const LowFooter = () => {
+      return (
+        <div class="bg-primary container-fluid mt-5">
+          <footer>
+            <p class="text-center footer mt-5" style={{color: "yellow"}}>&copy; 2022 Humam, Inc. All right reserved</p>
+          </footer>
+        </div>
+      )
+    }
+
+  ReactDOM.render(
+    <NavHeader/>,
+    document.getElementById('header')
+  );
+  ReactDOM.render(
+    <Biografi/>,
+    document.getElementById('app')
+  );
+  ReactDOM.render(
+    <Pengalaman/>,
+    document.getElementById('app2')
+  );
+  ReactDOM.render(
+    <Karya/>,
+    document.getElementById('app3')
+  );
+  ReactDOM.render(
+    <Penghargaan/>,
+    document.getElementById('app4')
+  );
+  ReactDOM.render(
+    <LowFooter/>,
+    document.getElementById('footer')
+  ); 
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
